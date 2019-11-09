@@ -10,15 +10,16 @@ namespace maher1
     {
         static void Main(string[] args)
         {
-            //program that returns a sum of n numbers (example: n=10):
-            //int sum = 0;
-            //for (int i = 1; i <= 10; i++)
-            //{
-            //    sum = sum+i;
+            program that returns a sum of n numbers(example: n = 10):
+            int sum = 0;
+            for (int i = 1; i <= 10; i++)
+            {
+                sum = sum + i;
 
-            //}
-            //Console.WriteLine("Sum is equal to: {0}", sum);
-            //Console.ReadKey();
+            }
+            Console.WriteLine("Sum is equal to: {0}", sum);
+            Console.ReadKey();
+
 
 
         }
