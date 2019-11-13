@@ -36,6 +36,18 @@ namespace maher1
             //double result = calculator.SimpleCalculator(a, b, o);
             //Console.WriteLine("The result is: {0} {1} {2}={3}", a, o, b, result);
             //Console.ReadKey();
+            //Console.WriteLine("Factorial of 8 is {0}", Factorial(8));
+            //Console.ReadKey();
+            //Console.WriteLine("Enter the first number: ");
+            //int a = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter the second number: ");
+            //int b = Convert.ToInt32(Console.ReadLine());
+            //Modify(ref a, ref b);
+            //Console.WriteLine("New values are: a={0} b={1}", a, b);
+            //Console.ReadKey();
+
+
+
         }
         public int FindMax(int a, int b)
         {
@@ -67,12 +79,37 @@ namespace maher1
                 case "/":
                     result = a / b;
                     break;
-                 default:
+                default:
                     Console.WriteLine("Unknown operation");
                     result = 0;
                     break;
             }
             return result;
         }
+        static int Factorial(int num)
+        {
+            int result;
+            if (num == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                result = Factorial(num - 1) * num;
+                return result;
+            }
+        }
+        static void Modify(ref int a, ref int b)
+        {
+            int r1 = a * 10;
+            a = r1;
+            int r2 = b + 2;
+            b = r2;
+
+        }
+
+            
+
+
     }
 }
