@@ -45,6 +45,23 @@ namespace maher1
             //Modify(ref a, ref b);
             //Console.WriteLine("New values are: a={0} b={1}", a, b);
             //Console.ReadKey();
+            //double k, f = 0;
+            //Console.WriteLine("Enter the temperature in Celsius:");
+            //double t = Convert.ToDouble(Console.ReadLine());
+            //TemperatureConverter(t, out k, out f);
+            //Console.ReadKey();
+            //Console.WriteLine("Enter the desired number:");
+            //int k = Convert.ToInt32(Console.ReadLine());
+            //int s = SumOfCharacters(k);
+            //Console.WriteLine("The sum of characters for number {0} is {1}", k, s);
+            //Console.ReadKey();
+            //Console.WriteLine("Enter the desired number:");
+            //int k = Convert.ToInt32(Console.ReadLine());
+            //int s = SumOfEven(k);
+            //Console.WriteLine("The sum of even numbers before {0} is {1}", k, s);
+            //Console.ReadKey();
+
+
 
 
 
@@ -107,8 +124,41 @@ namespace maher1
             b = r2;
 
         }
-
+        static void TemperatureConverter(double t,out double k, out double f)
+        {
             
+            k = t + 273.15;
+            f = t * 1.8 + 32;
+            Console.WriteLine("Temperature converted to K is {0}", k);
+            Console.WriteLine("Temperature converted to F is {0}", f);
+        }
+
+        static int SumOfCharacters(int k)
+        {
+            int sum = 0;
+            string l = Convert.ToString(k);
+            for (int i=0; i < l.Length; i++)
+            {
+                sum = sum + Convert.ToInt32(l.Substring(i, 1));
+            }
+            return sum;
+        }
+
+        static int SumOfEven(int k)
+        {
+            int sum = 0;
+            
+            for (int i = 0; i < k; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    sum = sum + i;
+                }
+                
+
+            }
+            return sum;
+        }    
 
 
     }
